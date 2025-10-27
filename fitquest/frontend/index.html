@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FitQuest - Gamified Fitness Challenges</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+  <!-- Header & Navigation -->
+  <header>
+    <div class="container">
+      <nav class="navbar">
+        <a href="#" class="logo" onclick="showPage('home')">
+          <i class="fas fa-dumbbell"></i>
+          <span>FitQuest</span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="#" onclick="showPage('home')" class="active">Home</a></li>
+          <li><a href="#" onclick="showPage('challenges')">Challenges</a></li>
+          <li><a href="#" onclick="showPage('leaderboard')">Leaderboard</a></li>
+          <li><a href="#" onclick="showPage('community')">Community</a></li>
+          <li><a href="#" onclick="showPage('about')">About</a></li>
+        </ul>
+        <div class="auth-buttons">
+          <button class="btn btn-outline" onclick="showPage('login')">Login</button>
+          <button class="btn btn-primary" onclick="showPage('register')">Sign Up</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Home Page -->
+  <section id="home" class="page active">
+    <section class="hero">
+      <div class="container">
+        <h1 class="fade-in">Level Up Your Fitness Journey</h1>
+        <p class="fade-in delay-1">Join challenges, track progress, and compete with friends in our gamified fitness platform. Transform your health while having fun!</p>
+        <div class="hero-buttons fade-in delay-2">
+          <button class="btn btn-accent" onclick="showPage('challenges')">Explore Challenges</button>
+          <button class="btn btn-outline" style="background-color: rgba(255,255,255,0.2); color: white; border-color: white;">How It Works</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-title">
+          <h2>Why Choose FitQuest?</h2>
+          <p>Our platform combines fitness tracking with gamification to keep you motivated and engaged</p>
+        </div>
+        <div class="features-grid">
+          <div class="feature-card fade-in">
+            <div class="feature-icon"><i class="fas fa-trophy"></i></div>
+            <h3>Challenges & Competitions</h3>
+            <p>Join daily, weekly, or monthly fitness challenges and compete with friends to earn rewards and climb the leaderboard.</p>
+          </div>
+          <div class="feature-card fade-in delay-1">
+            <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+            <h3>Progress Tracking</h3>
+            <p>Visualize your fitness journey with detailed progress charts and analytics. See how far you've come and set new goals.</p>
+          </div>
+          <div class="feature-card fade-in delay-2">
+            <div class="feature-icon"><i class="fas fa-users"></i></div>
+            <h3>Community Support</h3>
+            <p>Connect with like-minded fitness enthusiasts, share achievements, and motivate each other to reach new heights.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section challenges-section">
+      <div class="container">
+        <div class="section-title">
+          <h2>Popular Challenges</h2>
+          <p>Join thousands of users in these trending fitness challenges</p>
+        </div>
+        <div class="challenges-grid">
+          <!-- Challenge cards (static for demo, can be dynamic) -->
+          <div class="challenge-card fade-in">
+            <div class="challenge-image" style="background-color: #4CAF50;">
+              <i class="fas fa-walking"></i>
+            </div>
+            <div class="challenge-content">
+              <span class="challenge-category">Steps</span>
+              <h3>10K Steps Daily</h3>
+              <p>Walk 10,000 steps every day for 30 days to build a consistent walking habit.</p>
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: 65%"></div>
+              </div>
+              <div class="challenge-stats">
+                <span><i class="fas fa-users"></i> 2,458 participants</span>
+                <span><i class="far fa-clock"></i> 30 days</span>
+              </div>
+            </div>
+          </div>
+          <div class="challenge-card fade-in delay-1">
+            <div class="challenge-image" style="background-color: #2196F3;">
+              <i class="fas fa-water"></i>
+            </div>
+            <div class="challenge-content">
+              <span class="challenge-category">Hydration</span>
+              <h3>3L Water Daily</h3>
+              <p>Drink 3 liters of water every day for 21 days to improve hydration and energy levels.</p>
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: 40%"></div>
+              </div>
+              <div class="challenge-stats">
+                <span><i class="fas fa-users"></i> 1,892 participants</span>
+                <span><i class="far fa-clock"></i> 21 days</span>
+              </div>
+            </div>
+          </div>
+          <div class="challenge-card fade-in delay-2">
+            <div class="challenge-image" style="background-color: #FF9800;">
+              <i class="fas fa-spa"></i>
+            </div>
+            <div class="challenge-content">
+              <span class="challenge-category">Yoga</span>
+              <h3>30-Day Yoga Challenge</h3>
+              <p>Complete a daily yoga session for 30 days to improve flexibility and reduce stress.</p>
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: 75%"></div>
+              </div>
+              <div class="challenge-stats">
+                <span><i class="fas fa-users"></i> 3,215 participants</span>
+                <span><i class="far fa-clock"></i> 30 days</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="text-align:center;margin-top:40px;">
+          <button class="btn btn-primary" onclick="showPage('challenges')">View All Challenges</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="dashboard-preview">
+      <div class="container">
+        <h2 class="fade-in">Your Personal Fitness Dashboard</h2>
+        <p class="fade-in delay-1">Track your progress, see your achievements, and monitor your ranking on the leaderboard with our intuitive dashboard.</p>
+        <button class="btn btn-accent fade-in delay-2" onclick="showPage('register')">Create Your Account</button>
+      </div>
+    </section>
+  </section>
+
+  <!-- Login Page -->
+  <section id="login" class="page">
+    <div class="auth-container">
+      <div class="auth-card">
+        <h2>Welcome Back!</h2>
+        <form id="loginForm">
+          <div class="form-group">
+            <label for="loginEmail">Email Address</label>
+            <input type="email" id="loginEmail" class="form-control" placeholder="Enter your email" required>
+            <div class="error-message" id="loginEmailError"></div>
+          </div>
+          <div class="form-group">
+            <label for="loginPassword">Password</label>
+            <input type="password" id="loginPassword" class="form-control" placeholder="Enter your password" required>
+            <div class="error-message" id="loginPasswordError"></div>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;">Login</button>
+        </form>
+        <div class="auth-switch">Don't have an account? <a onclick="showPage('register')">Sign up here</a></div>
+        <div class="success-message" id="loginSuccess"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Registration Page -->
+  <section id="register" class="page">
+    <div class="auth-container">
+      <div class="auth-card">
+        <h2>Join FitQuest</h2>
+        <form id="registerForm">
+          <div class="form-group">
+            <label for="registerName">Full Name</label>
+            <input type="text" id="registerName" class="form-control" placeholder="Enter your full name" required>
+            <div class="error-message" id="registerNameError"></div>
+          </div>
+          <div class="form-group">
+            <label for="registerEmail">Email Address</label>
+            <input type="email" id="registerEmail" class="form-control" placeholder="Enter your email" required>
+            <div class="error-message" id="registerEmailError"></div>
+          </div>
+          <div class="form-group">
+            <label for="registerPassword">Password</label>
+            <input type="password" id="registerPassword" class="form-control" placeholder="Create a password" required>
+            <div class="error-message" id="registerPasswordError"></div>
+          </div>
+          <div class="form-group">
+            <label for="registerConfirmPassword">Confirm Password</label>
+            <input type="password" id="registerConfirmPassword" class="form-control" placeholder="Confirm your password" required>
+            <div class="error-message" id="registerConfirmPasswordError"></div>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;">Create Account</button>
+        </form>
+        <div class="auth-switch">Already have an account? <a onclick="showPage('login')">Login here</a></div>
+        <div class="success-message" id="registerSuccess"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Other Pages (Placeholders) -->
+<section id="challenges" class="page">
+  <div class="section">
+    <div class="container">
+      <h2>All Challenges</h2>
+      <p>Browse and join available fitness challenges.</p>
+      <div style="margin-bottom: 20px;">
+        <input type="text" id="challengeSearch" class="form-control" placeholder="Search Challenges by name or category">
+      </div>
+      <div class="challenges-grid" id="challengesGrid">
+        <!-- Challenges will be injected by JS -->
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section id="leaderboard" class="page">
+    <div class="section">
+      <div class="container">
+        <h2>Leaderboard</h2>
+        <p>See who's leading the challenges.</p>
+      </div>
+    </div>
+  </section>
+  <section id="community" class="page">
+    <div class="section">
+      <div class="container">
+        <h2>Community</h2>
+        <p>Connect with other fitness enthusiasts.</p>
+      </div>
+    </div>
+  </section>
+  <section id="about" class="page">
+    <div class="section">
+      <div class="container">
+        <h2>About FitQuest</h2>
+        <p>Learn more about our mission and team.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>FitQuest</h3>
+          <p>Transforming fitness through gamification. Join our community and level up your health journey.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a onclick="showPage('home')">Home</a></li>
+            <li><a onclick="showPage('challenges')">Challenges</a></li>
+            <li><a onclick="showPage('leaderboard')">Leaderboard</a></li>
+            <li><a onclick="showPage('community')">Community</a></li>
+            <li><a onclick="showPage('about')">About Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Support</h3>
+          <ul class="footer-links">
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Contact Info</h3>
+          <ul class="footer-links">
+            <li><i class="fas fa-map-marker-alt"></i> 123 Fitness Street, Health City</li>
+            <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+            <li><i class="fas fa-envelope"></i> support@fitquest.com</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 FitQuest. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
