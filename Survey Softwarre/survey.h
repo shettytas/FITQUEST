@@ -1,44 +1,60 @@
 #ifndef SURVEY_H
 #define SURVEY_H
 
-// ------------------------- Structures -------------------------
+// ------------------------- STRUCTURE DEFINITIONS -------------------------
+
+// Binary Search Tree node for storing survey responses
 typedef struct BSTNode {
-    char option[50];
-    int count;
+    char option[50];        // option text (e.g., "Agree")
+    int count;              // frequency of this option
     struct BSTNode *left, *right;
 } BSTNode;
 
+// Linked list node for storing questions
 typedef struct Question {
-    char text[200];
-    char options[5][50];
-    int numOptions;
-    BSTNode *responses;
+    char text[200];         // question text
+    char options[5][50];    // up to 5 options
+    int numOptions;         // number of options
+    BSTNode *responses;     // root of BST that holds responses for this question
+    int totalResponses;     // total responses recorded for this question
     struct Question *next;
 } Question;
 
+// Survey containing linked list of questions
 typedef struct Survey {
     char title[100];
-    Question *questions;
+    Question *questions;    // head of question linked list
+    int conducted;          // flag: 0 = never conducted, 1 = conducted at least once
+    struct Survey *next;
 } Survey;
 
-typedef struct SurveyNode {
-    Survey survey;
-    struct SurveyNode *next;
-} SurveyNode;
+// Linked list head type alias
+typedef Survey SurveyNode;
 
-// ------------------------- Function Prototypes -------------------------
+// ------------------------- FUNCTION PROTOTYPES -------------------------
+
+// BST operations
 BSTNode* createBSTNode(char *option);
 BSTNode* insertBST(BSTNode *root, char *option);
-int totalResponses(BSTNode *root);
+BSTNode* searchBST(BSTNode *root, const char *key);
+int totalResponsesBST(BSTNode *root);
 void inorderPrint(BSTNode *root, int total);
 
+// Question and survey operations
 Question* newQuestion(char *text, int numOptions);
-void addQuestion(Survey *survey);
-void conductSurvey(Survey *survey);
-void publishResults(Survey *survey);
+void addQuestion(SurveyNode **head);           
+void addQuestionToSurvey(SurveyNode *s); 
+void viewSurveyDetails(SurveyNode *head);      
+void conductSurvey(SurveyNode *head);          
+void publishResults(SurveyNode *head);         
 
+// Multiple surveys operations
 SurveyNode* createSurveyNode(char *title);
-void listSurveys(SurveyNode *head);
-SurveyNode* selectSurvey(SurveyNode *head);
+SurveyNode* selectSurveyWithQuestions(SurveyNode *head);   
+SurveyNode* selectSurveyConducted(SurveyNode *head);      
+SurveyNode* selectAnySurvey(SurveyNode *head);            
+
+// Utility
+void clearStdin();
 
 #endif
