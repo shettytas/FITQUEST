@@ -23,8 +23,8 @@ Functions using BST only are:
 - searchBST()  
 - totalResponsesBST()  
 
-### Interaction of Linked Lists and BST:
-Functions using both are:  
+## Interaction of Linked Lists and BST:
+Functions using both data structures are:  
 - conductSurvey()   
 - publishResults()   
 The Linked List in the Survey Management System is used to organize surveys and their questions sequentially, while the Binary Search Tree (BST) attached to each question stores and counts user responses efficiently.
