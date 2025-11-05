@@ -30,3 +30,5 @@ The Linked List in the Survey Management System is used to organize surveys and 
 During survey conduction, the program traverses the linked list of questions and inserts each response into the corresponding question’s BST.
 When publishing results, it again traverses the linked list and accesses each BST to compute counts and percentages.
 Thus, the Linked List manages the survey structure, and the BST handles response analytics — working together to form a complete survey analysis system.
+
+<img width="464" height="849" alt="image" src="https://github.com/user-attachments/assets/88c680a8-7346-44cb-8519-4f51830d261b" />
