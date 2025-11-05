@@ -15,7 +15,7 @@ selectSurveyConducted()
 selectAnySurvey()  
 
 ## BST
-The BST stores the **responses* for each question. Each response option is a node in the tree, and the number of times each option is selected is stored in the node's count field.
+The BST stores the *responses* for each question. Each response option is a node in the tree, and the number of times each option is selected is stored in the node's count field.
 This structure allows efficient counting and updating of responses.
 Functions using BST only are:
 createBSTNode()  
@@ -23,11 +23,10 @@ insertBST()
 searchBST()  
 totalResponsesBST()  
 
-Functions using both are:
-conductSurvey()  
-publishResults()  
-
-
+### Interaction of Linked Lists and BST:
+Functions using both are:  
+conductSurvey()   
+publishResults()   
 The Linked List in the Survey Management System is used to organize surveys and their questions sequentially, while the Binary Search Tree (BST) attached to each question stores and counts user responses efficiently.
 During survey conduction, the program traverses the linked list of questions and inserts each response into the corresponding question’s BST.
 When publishing results, it again traverses the linked list and accesses each BST to compute counts and percentages.
