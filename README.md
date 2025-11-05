@@ -4,26 +4,26 @@ The data structures used here are Linked list and BST.
 The Linked List is used to store **surveys* and their associated *questions*.
 * Each survey node points to its questions, allowing easy sequential access.
 Functions using Linked lists only are:
-createSurveyNode()
-addQuestion()
-newQuestion()
-addQuestionToSurvey()
-viewSurveyDetails()
-selectSurveyWithQuestions()
-selectSurveyConducted()
-selectAnySurvey()
+createSurveyNode() 
+addQuestion()  
+newQuestion()  
+addQuestionToSurvey()  
+viewSurveyDetails()   
+selectSurveyWithQuestions()  
+selectSurveyConducted()  
+selectAnySurvey()  
 
 The BST stores the **responses* for each question. Each response option is a node in the tree, and the number of times each option is selected is stored in the node's count field.
 * This structure allows efficient counting and updating of responses.
 Functions using BST only are:
-createBSTNode()
-insertBST()
-searchBST()
-totalResponsesBST()
+createBSTNode()  
+insertBST()  
+searchBST()  
+totalResponsesBST()  
 
 Functions using both are:
-conductSurvey()
-publishResults()
+conductSurvey()  
+publishResults()  
 
 
 The Linked List in the Survey Management System is used to organize surveys and their questions sequentially, while the Binary Search Tree (BST) attached to each question stores and counts user responses efficiently.
