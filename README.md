@@ -15,7 +15,9 @@ selectSurveyConducted()
 selectAnySurvey()  
 
 ## BST
-The BST stores the *responses* for each question. Each response option is a node in the tree, and the number of times each option is selected is stored in the node's count field.
+The BST stores the *##FLOWCHART
+<img width="464" height="849" alt="image" src="https://github.com/user-attachments/assets/88c680a8-7346-44cb-8519-4f51830d261b" />
+responses* for each question. Each response option is a node in the tree, and the number of times each option is selected is stored in the node's count field.
 This structure allows efficient counting and updating of responses.
 Functions using BST only are:
 createBSTNode()  
@@ -32,5 +34,4 @@ During survey conduction, the program traverses the linked list of questions and
 When publishing results, it again traverses the linked list and accesses each BST to compute counts and percentages.
 Thus, the Linked List manages the survey structure, and the BST handles response analytics — working together to form a complete survey analysis system.
 
-# FLOWCHART
-<img width="464" height="849" alt="image" src="https://github.com/user-attachments/assets/88c680a8-7346-44cb-8519-4f51830d261b" />
+
