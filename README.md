@@ -30,8 +30,8 @@ publishResults()
 The Linked List in the Survey Management System is used to organize surveys and their questions sequentially, while the Binary Search Tree (BST) attached to each question stores and counts user responses efficiently.
 During survey conduction, the program traverses the linked list of questions and inserts each response into the corresponding question’s BST.
 When publishing results, it again traverses the linked list and accesses each BST to compute counts and percentages.
-Thus, the Linked List manages the survey structure, and the BST handles response analytics — working together to form a complete survey analysis system.
+Thus, the Linked List manages the survey structure, and the BST handles response analytics — working together to form a complete survey analysis system.  
 
-##FLOWCHART
+## FLOWCHART
 <img width="464" height="849" alt="image" src="https://github.com/user-attachments/assets/88c680a8-7346-44cb-8519-4f51830d261b" />
 
